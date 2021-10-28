@@ -130,7 +130,7 @@ DevId = Config.DevId or Config.SUDO
 SudoIds = {Config.SudoIds,742655070,546534978} or {Config.sudo_users,742655070,546534978}
 DoWz = Config.DoWz or Config.bot_id
 TokenBot = Config.TokenBot or Config.token
-NameBot = (DevAli:get(DoWz..'Ali:NameBot') or 'دندنه')
+NameBot = (DevAli:get(DoWz..'Ali:NameBot') or 'دوز')
 --     Source DoWz     --
 FilesPrint = "\27[35m".."\nAll Source Files Started ↬ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"..'\27[m'
 FilesNumber = 0
@@ -1419,8 +1419,8 @@ end
 DevAli:del(DoWz.."Del:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_)
 return false
 end
-if text and text:match('^'..(DevAli:get(DoWz..'Ali:NameBot') or "دندنه")..' ') then
-data.message_.content_.text_ = data.message_.content_.text_:gsub('^'..(DevAli:get(DoWz..'Ali:NameBot') or "دندنه")..' ','')
+if text and text:match('^'..(DevAli:get(DoWz..'Ali:NameBot') or "دوز")..' ') then
+data.message_.content_.text_ = data.message_.content_.text_:gsub('^'..(DevAli:get(DoWz..'Ali:NameBot') or "دوز")..' ','')
 end
 if data.message_.content_.text_ then
 local NewCmmd = DevAli:get(DoWz.."Set:Cmd:Group:New1"..msg.chat_id_..":"..data.message_.content_.text_)
@@ -1727,7 +1727,7 @@ end
 if ChatType == 'pv' then 
 if text == '/start' or text == 'رجوع ،🔙‘' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '♪︙مرحبا عزيزي المطور \n♪︙انت المطور الاساسي هنا \n♪︙اليك ازرار سورس دندنه \n♪︙تستطيع التحكم بكل الاوامر فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '♪︙مرحبا عزيزي المطور \n♪︙انت المطور الاساسي هنا \n♪︙اليك ازرار سورس دوز \n♪︙تستطيع التحكم بكل الاوامر فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'وضع اسم البوت','↫ تحديث ♪','وضع كليشه المطور'},
 {'↫ المطورين ♪','↫ الاحصائيات ♪'},
@@ -1755,7 +1755,7 @@ return false
 end end
 if text == '~ تعيين كلايش الاوامر ~' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '♪︙اهلا بك مجددا عزيزي المطور \n♪︙اليك الازرار الخاصه بتعديل وتغيير كلايش سورس دندنه فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '♪︙اهلا بك مجددا عزيزي المطور \n♪︙اليك الازرار الخاصه بتعديل وتغيير كلايش سورس دوز فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'حذف كليشة الايدي','تعيين كليشة الايدي'},
 {'تعيين امر الاوامر'},
@@ -3192,7 +3192,7 @@ end end
 if SecondSudo(msg) then
 if text == 'جلب نسخه الكروبات' or text == 'جلب نسخه احتياطيه' or text == 'جلب النسخه الاحتياطيه' then
 local List = DevAli:smembers(DoWz..'Ali:Groups') 
-local BotName = (DevAli:get(DoWz.."Ali:NameBot") or 'دندنه')
+local BotName = (DevAli:get(DoWz.."Ali:NameBot") or 'دوز')
 local GetJson = '{"BotId": '..DoWz..',"BotName": "'..BotName..'","GroupsList":{'  
 for k,v in pairs(List) do 
 LinkGroups = DevAli:get(DoWz.."Ali:Groups:Links"..v)
@@ -3385,19 +3385,19 @@ end
 --     Source DoWz     --
 if ChatType == 'sp' or ChatType == 'gp'  then
 if text == 'بوت' or text == 'بوتت' then 
-NameBot = (DevAli:get(DoWz..'Ali:NameBot') or 'دندنه')
+NameBot = (DevAli:get(DoWz..'Ali:NameBot') or 'دوز')
 local DoWzTEAM = {"لتكول بوت اسمي "..NameBot.." 😒🔪","اسمي القميل "..NameBot.." 😚♥️","عندي اسم تره 😒💔","صيحولي "..NameBot.." كافي بوت 😒🔪","انت البوت لك 😒💔"} 
 Dev_Ali(msg.chat_id_, msg.id_, 1, DoWzTEAM[math.random(#DoWzTEAM)] , 1, 'html') 
 return false
 end
 if text == 'اسم البوت' or text == 'البوت شنو اسمه' or text == 'شسمه البوت' or text == 'البوت شسمه' then
-NameBot = (DevAli:get(DoWz..'Ali:NameBot') or 'دندنه') 
+NameBot = (DevAli:get(DoWz..'Ali:NameBot') or 'دوز') 
 local DoWzTEAM = {"اسمي القميل "..NameBot.." 😚♥️","هلاا يروحيي وياكك "..NameBot.." 😻♥️"} 
 Dev_Ali(msg.chat_id_, msg.id_, 1, DoWzTEAM[math.random(#DoWzTEAM)] , 1, 'html') 
 return false
 end
-if text and text == (DevAli:get(DoWz..'Ali:NameBot') or 'دندنه') then 
-NameBot = (DevAli:get(DoWz..'Ali:NameBot') or 'دندنه')
+if text and text == (DevAli:get(DoWz..'Ali:NameBot') or 'دوز') then 
+NameBot = (DevAli:get(DoWz..'Ali:NameBot') or 'دوز')
 local DoWzTEAM = {'😸♥️ هلا كلبي وياك '..NameBot..' تفضل','ترةه مصختهاا احجيي شرايد 😕😒💔','اطلقق واحدد يصيح '..NameBot..' 😻♥️','خبصتت امنةة شتريدد عااد 🤧😒💔'} 
 Dev_Ali(msg.chat_id_, msg.id_, 1, DoWzTEAM[math.random(#DoWzTEAM)] , 1, 'html') 
 return false 
@@ -3548,7 +3548,7 @@ DevAli:set(DoWz..'Ali:Games:Ids'..msg.chat_id_,true)
 end
 if text == 'ترتيب' and ChCheck(msg) or text == 'الترتيب' and ChCheck(msg) then
 if not DevAli:get(DoWz..'Ali:Lock:Games'..msg.chat_id_) then
-DevAli2 = {'سحور','سياره','استقبال','قنفه','ايفون','بزونه','مطبخ','كرستيانو','دجاجه','مدرسه','الوان','غرفه','ثلاجه','كهوه','سفينه','الدندنه','محطه','طياره','رادار','منزل','مستشفى','كهرباء','تفاحه','اخطبوط','سلمون','فرنسا','برتقاله','تفاح','مطرقه','بتيته','لهانه','شباك','باص','سمكه','ذباب','تلفاز','حاسوب','انترنيت','ساحه','جسر'};
+DevAli2 = {'سحور','سياره','استقبال','قنفه','ايفون','بزونه','مطبخ','كرستيانو','دجاجه','مدرسه','الوان','غرفه','ثلاجه','كهوه','سفينه','الدوز','محطه','طياره','رادار','منزل','مستشفى','كهرباء','تفاحه','اخطبوط','سلمون','فرنسا','برتقاله','تفاح','مطرقه','بتيته','لهانه','شباك','باص','سمكه','ذباب','تلفاز','حاسوب','انترنيت','ساحه','جسر'};
 name = DevAli2[math.random(#DevAli2)]
 DevAli:set(DoWz..'Ali:GameNum'..msg.chat_id_,name)
 DevAli:del(DoWz..'Ali:Games:Ids'..msg.chat_id_)
@@ -3567,7 +3567,7 @@ name = string.gsub(name,'غرفه','غ ه ر ف')
 name = string.gsub(name,'ثلاجه','ج ه ت ل ا')
 name = string.gsub(name,'كهوه','ه ك ه و')
 name = string.gsub(name,'سفينه','ه ن ف ي س')
-name = string.gsub(name,'الدندنه','ق ع ا ل ر ا')
+name = string.gsub(name,'الدوز','ق ع ا ل ر ا')
 name = string.gsub(name,'محطه','ه ط م ح')
 name = string.gsub(name,'طياره','ر ا ط ي ه')
 name = string.gsub(name,'رادار','ر ا ر ا د')
@@ -9480,7 +9480,7 @@ if text == 'جلب نسخه السورس' then
 if not Sudo(msg) then
 Dev_Ali(msg.chat_id_, msg.id_, 1, '♪︙للمطور الاساسي فقط ', 1, 'md')
 else
-sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './DoWz.lua', '♪︙نسخة ملف سورس دندنه',dl_cb, nil)
+sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './DoWz.lua', '♪︙نسخة ملف سورس دوز',dl_cb, nil)
 end end
 --     Source DoWz     --
 if text == 'روابط الكروبات' or text == 'روابط المجموعات' then
@@ -10481,7 +10481,7 @@ end
 --     Source DoWz     --
 if SecondSudo(msg) then
 if text == "تحديث السورس" or text == "تحديث سورس" then 
-Dev_Ali(msg.chat_id_, msg.id_, 1, '♪︙جاري تحديث سورس دندنه', 1, 'md') 
+Dev_Ali(msg.chat_id_, msg.id_, 1, '♪︙جاري تحديث سورس دوز', 1, 'md') 
 os.execute('rm -rf DoWz.lua') 
 os.execute('wget https://raw.githubusercontent.com/DoWzTEM/DoWz/master/DoWz.lua') 
 dofile('DoWz.lua') 
@@ -10516,7 +10516,7 @@ if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
 if Get_info then
-local TextS = "\n♪︙قائمة ملفات متجر سورس دندنه\n♪︙الملفات المتوفره حاليا ↫ ⤈\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"
+local TextS = "\n♪︙قائمة ملفات متجر سورس دوز\n♪︙الملفات المتوفره حاليا ↫ ⤈\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"
 local TextE = "┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n♪︙علامة ↫ (✔) تعني الملف مفعل\n♪︙علامة ↫ (✖️) تعني الملف معطل\n"
 local NumFile = 0
 for name,Info in pairs(res.plugins_) do
